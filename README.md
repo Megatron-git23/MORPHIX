@@ -115,7 +115,6 @@ Morphix/
 │
 ├── backend.py
 ├── main.py
-├── requirements.txt
 ├── README.md
 │
 └── sample_files/
