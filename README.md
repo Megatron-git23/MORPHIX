@@ -1,28 +1,33 @@
 # 🔄 Morphix - Universal File Converter
 
+<div align="center">
 
+![Python](https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge\&logo=python)
+![Pandas](https://img.shields.io/badge/Data-Pandas-success?style=for-the-badge\&logo=pandas)
+![Pillow](https://img.shields.io/badge/Image-Pillow-orange?style=for-the-badge)
+![docx2pdf](https://img.shields.io/badge/Document-docx2pdf-red?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge)
 
+### A Python-Based Universal File Conversion Utility Developed Using Pandas, Pillow and docx2pdf
 
-\
-
-### A Lightweight Python-Based Universal File Conversion Utility
+</div>
 
 ---
 
 ## 📖 Overview
 
-**Morphix** is a desktop-based command-line file conversion utility developed using Python. The application enables users to convert files between various formats quickly and efficiently.
+**Morphix** is a lightweight file conversion application developed using **Python**. It provides a unified platform for converting documents, images, and structured data files into different formats.
 
-Morphix simplifies everyday file conversion tasks by providing a single interface for handling document, image, and data format conversions.
+The application simplifies everyday conversion tasks by allowing users to convert files through a simple command-line interface.
 
-This project demonstrates concepts such as:
+Morphix is designed as an educational project to demonstrate concepts such as:
 
-* File Handling in Python
-* Data Processing using Pandas
-* Image Processing using Pillow
-* Document Conversion using docx2pdf
-* Modular Programming
-* Command-Line Application Development
+* File handling in Python
+* Data processing using Pandas
+* Image manipulation using Pillow
+* Document conversion using docx2pdf
+* Modular programming
+* Command-line application development
 
 ---
 
@@ -30,7 +35,7 @@ This project demonstrates concepts such as:
 
 ### 📄 Document Conversion
 
-* Convert **Word Documents (.docx)** to **PDF (.pdf)**.
+* Convert Microsoft Word documents (`.docx`) into PDF files (`.pdf`).
 * Automatically generates output filenames.
 
 ### 📊 CSV to JSON Conversion
@@ -41,25 +46,25 @@ This project demonstrates concepts such as:
 ### 🗂️ JSON to CSV Conversion
 
 * Converts JSON files into CSV format.
-* Useful for data analysis and spreadsheet applications.
+* Suitable for spreadsheet and data analysis applications.
 
-### 🖼️ Image Format Conversion
+### 🖼️ Image Conversion
 
-Supports image conversions such as:
+Supports image conversion between formats such as:
 
 * PNG → JPG
 * JPG → PNG
 * JPEG → PNG
 * PNG → JPEG
 
-### ⚡ Simple Command-Line Interface
+### ⚡ Interactive Command-Line Interface
 
-* Easy-to-use interactive terminal interface.
-* Minimal user input required.
+* Easy-to-use terminal-based interface.
+* Minimal user interaction required.
 
-### 🔄 Automatic Output Generation
+### 🔄 Automatic File Generation
 
-* Output files are automatically named based on the input filename.
+* Converted files are automatically saved with appropriate extensions.
 
 ---
 
@@ -75,25 +80,17 @@ Supports image conversions such as:
 |  backend.py    |
 +--------+-------+
          |
-         +-----------------------+
-         |                       |
-         v                       v
-+----------------+      +----------------+
-| Document Tools |      | Image Tools    |
-+----------------+      +----------------+
-         |                       |
-         v                       v
-docx2pdf Library         Pillow Library
-
+         +----------------------+
+         |                      |
+         v                      v
++----------------+    +----------------+
+| Data Converter |    | Image Converter|
++----------------+    +----------------+
          |
          v
-
 +----------------+
-| Data Tools     |
+| PDF Converter  |
 +----------------+
-         |
-         v
-Pandas Library
 ```
 
 ---
@@ -102,12 +99,12 @@ Pandas Library
 
 | Technology   | Purpose                   |
 | ------------ | ------------------------- |
-| Python       | Core Programming Language |
-| Pandas       | CSV and JSON Processing   |
-| Pillow (PIL) | Image Processing          |
-| docx2pdf     | Word to PDF Conversion    |
-| OS Module    | File Handling             |
-| CLI          | User Interaction          |
+| Python       | Core programming language |
+| Pandas       | CSV and JSON processing   |
+| Pillow (PIL) | Image processing          |
+| docx2pdf     | Word to PDF conversion    |
+| OS Module    | File handling             |
+| CLI          | User interaction          |
 
 ---
 
@@ -118,7 +115,9 @@ Morphix/
 │
 ├── backend.py
 ├── main.py
+├── requirements.txt
 ├── README.md
+│
 └── sample_files/
 ```
 
@@ -153,18 +152,18 @@ cd Morphix
 
 ---
 
-## Step 2: Install Required Libraries
+## Step 2: Install Python Dependencies
 
-Install all dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
-Or install manually:
+Install required libraries using pip:
 
 ```bash
 pip install pandas pillow docx2pdf
+```
+
+Alternatively, install from requirements file:
+
+```bash
+pip install -r requirements.txt
 ```
 
 ---
@@ -185,8 +184,8 @@ python main.py
 
 1. Launch the application.
 2. Enter the file name.
-3. Select the desired output format.
-4. Wait for the conversion to complete.
+3. Choose the desired output format.
+4. Wait for the conversion process to finish.
 5. The converted file will be saved automatically.
 
 ---
@@ -233,38 +232,41 @@ Arun,Testing,40000
 
 # 🔒 Error Handling
 
-Morphix validates file formats before conversion.
+Morphix includes basic validation mechanisms.
 
 Examples:
 
 * Invalid file name detection
 * Unsupported conversion prevention
 * Missing file detection
+* Invalid format handling
 
 ---
 
 # 🌟 Future Enhancements
 
 * [ ] Graphical User Interface (GUI)
-* [ ] Drag and Drop Support
 * [ ] Batch File Conversion
 * [ ] Excel File Support
 * [ ] PDF to Word Conversion
-* [ ] File Compression Support
-* [ ] Cloud Integration
+* [ ] Drag and Drop Support
+* [ ] Cloud Storage Integration
 * [ ] Conversion Progress Indicator
+* [ ] File Compression Support
 
 ---
 
 # 🧪 Testing
 
-| Test Case              | Expected Result       |
-| ---------------------- | --------------------- |
-| Valid DOCX → PDF       | PDF Created           |
-| Valid CSV → JSON       | JSON Created          |
-| Valid JSON → CSV       | CSV Created           |
-| Valid Image Conversion | Converted Image Saved |
-| Invalid File           | Error Message         |
+Test Cases:
+
+| Test Case              | Expected Result |
+| ---------------------- | --------------- |
+| Valid DOCX → PDF       | PDF Generated   |
+| Valid CSV → JSON       | JSON Generated  |
+| Valid JSON → CSV       | CSV Generated   |
+| Valid Image Conversion | Image Converted |
+| Invalid File           | Error Message   |
 
 ---
 
@@ -309,6 +311,8 @@ This project is developed for educational and learning purposes.
 
 ---
 
+<div align="center">
+
 ## ⭐ If you found this project useful, consider giving it a star!
 
-### 🔄 Morphix — One Tool, Endless Transformations.
+</div>
